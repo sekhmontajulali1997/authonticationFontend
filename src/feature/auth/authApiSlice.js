@@ -1,7 +1,7 @@
 // create authApiSlice
 
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import {API,APIForVerify} from "../../apiAxiosInstance/api";
+import {API} from "../../apiAxiosInstance/api";
 
 // this is UserRegisterApiSlice
 export const UserRegisterApiSlice = createAsyncThunk(
@@ -20,7 +20,7 @@ export const userVerify_email_by_otpApiSlice = createAsyncThunk(
   "authSlice/userVerify_email_by_otpApiSlice",
   async (data) => {
     try {
-      const response = await APIForVerify.post("/users/verify_email_by_otp", data);
+      const response = await API.post("/users/verify_email_by_otp", data);
       
       return response.data;
     } catch (error) {
