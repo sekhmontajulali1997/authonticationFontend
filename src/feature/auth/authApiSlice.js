@@ -1,7 +1,7 @@
 // create authApiSlice
 
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import {API} from "../../apiAxiosInstance/api";
+import API from "../../apiAxiosInstance/api";
 
 // this is UserRegisterApiSlice
 export const UserRegisterApiSlice = createAsyncThunk(
