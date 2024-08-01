@@ -2,7 +2,7 @@ import axios from "axios";
 
 const API = axios.create({
   baseURL:
-    "https://authonticationauthoriation-backend-latest.onrender.com/api/v1",
+    "https://authontication-backend.vercel.app/api/v1",
   withCredentials: true,
   
 });
