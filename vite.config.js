@@ -9,6 +9,14 @@ export default defineConfig({
     host: true,
     watch: {
       usePolling: true
+    },
+    proxy: {
+      '/api': {
+        target: 'https://authontication-backend.vercel.app',
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
     }
   }
 })
